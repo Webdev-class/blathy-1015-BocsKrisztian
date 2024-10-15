@@ -11,7 +11,7 @@ let customers = [
     {id:10, name:"Jonas Tungate", age:83, address:{city:"Padangulaktanding", street:"224 Manley Drive", house:49}, newsLetter: true}
 ]
 
-function removeCustomer(id) {
-    //TODO
+function removeCustomer(key: keyof User, value: string | number | boolean): void {
+    users = users.filter(user => user[key] !== value);
 }
 module.exports = removeCustomer;
