@@ -19,7 +19,14 @@ function isCustomer(name, age, address, newsLetter) {
     //TODO
 }
 
-function addCustomer(name, age, address, newsLetter) {
-    //TODO
+function addCustomer(userName: string, age: number, address: string, isAdmin: boolean): void {
+    const newUser: User = {
+        id: Date.now().toString(),
+        userName,
+        age,
+        address,
+        isAdmin,
+    };
+    users.push(newUser);
 }
 module.exports = addCustomer;
